@@ -1,0 +1,6 @@
+1. extract user input
+2. look for the existing user
+3. hash the password
+4. create user model
+5. throw error if any
+6. Connect to client side
