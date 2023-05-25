@@ -5,13 +5,16 @@ const authRouter = require('./routes/auth');
 const PORT = 3000;
 const app = express();
 
-
-
 app.use(express.json());
-app.listen(PORT, "0.0.0.0", ()=> {
-    console.log(`connected at port ${PORT}`);
-});
 app.use(authRouter);
+
+try{
+    app.listen(PORT,"0.0.0.0", () => {
+      console.log(`connected at port ${PORT}`);
+    });
+  } catch (err) {
+    console.error(`Error starting the server: ${err}`);
+}
 
 const DB = "mongodb+srv://yashlondhe9151:yash_123@cluster0.uhewynp.mongodb.net/?retryWrites=true&w=majority";
 
@@ -24,9 +27,3 @@ mongoose
     .catch((e) => {
         console.log(e);
     });
-
-    app.listen(PORT, "0.0.0.0", () =>{
-        console.log(`connected at port ${PORT}`);
-
-    });
-    
