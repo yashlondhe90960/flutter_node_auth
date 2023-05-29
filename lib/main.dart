@@ -36,6 +36,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Node Auth',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -43,6 +44,5 @@ class _MyAppState extends State<MyApp> {
           ? const SignUpScreen()
           : const HomeScreen(),
     );
-    
   }
 }
