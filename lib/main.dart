@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_node_auth/providers/user_provider.dart';
 import 'package:flutter_node_auth/screens/home_screen.dart';
 import 'package:flutter_node_auth/screens/signup_screen.dart';
-import 'package:flutter_node_auth/services/auth_services.dart';
+// import 'package:flutter_node_auth/services/auth_services.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(
     MultiProvider(
       providers: [
+        
         ChangeNotifierProvider(create: (_) => UserProvider()),
       ],
       child: const MyApp(),
